@@ -173,10 +173,12 @@ which.exe C:\python313-64\python.exe || exit 1
 echo C:\python313-64\python.exe: FOUND | tee.exe -a test.log
 which.exe C:\python314-64\python.exe || exit 1
 echo C:\python314-64\python.exe: FOUND | tee.exe -a test.log
+which.exe C:\python315-64\python.exe || exit 1
+echo C:\python315-64\python.exe: FOUND | tee.exe -a test.log
 
 set LOCAL_PATH=%PATH%
 
-FOR %%v IN (10 11 12 13 14) DO (
+FOR %%v IN (10 11 12 13 14 15) DO (
   title Test Python 3.%%v
   echo Creating Python3.%%v venv... | tee.exe -a test.log
   set PATH=c:\python3%%v-64;c:\python3%%V-64\Scripts;%PATH%
